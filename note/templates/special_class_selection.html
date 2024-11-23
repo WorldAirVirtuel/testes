@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sélection de la classe spéciale</title>
+</head>
+<body>
+    <h1>Sélectionnez une classe</h1>
+    <form method="POST">
+        <label for="class">Choisissez votre classe :</label>
+        <select name="class" id="class">
+            {% for class in classes %}
+            <option value="{{ class }}">{{ class }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Continuer</button>
+    </form>
+</body>
+</html>

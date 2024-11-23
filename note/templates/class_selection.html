@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sélection de la classe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Sélectionner une classe</h1>
+    <form method="post">
+        <label for="class">Classe:</label>
+        <select id="class" name="class">
+            {% for class in classes %}
+                <option value="{{ class }}">{{ class }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Choisir</button>
+    </form>
+    <form method="POST">
+        <label for="class">Choisissez votre classe :</label>
+        <select name="class">
+            {% for class in classes %}
+            <option value="{{ class }}">{{ class }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Continuer</button>
+    </form>
+    
+</body>
+</html>

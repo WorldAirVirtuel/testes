@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Résultats</title>
+</head>
+<body>
+    <h1>Vos résultats</h1>
+    <table border="1">
+        <tr>
+            <th>Utilisateur</th>
+            <th>Fille</th>
+            <th>Tête</th>
+            <th>Seins</th>
+            <th>Fesses</th>
+            <th>Personnalité</th>
+            <th>Total sur 20</th>
+        </tr>
+        {% for username, class_name, student, grade_tete, grade_sein, grade_fesse, grade_personnalite, total_grade in special_grades %}
+        <tr>
+            <td>{{ username }}</td>
+            <td>{{ student }}</td>
+            <td>{{ grade_tete }}</td>
+            <td>{{ grade_sein }}</td>
+            <td>{{ grade_fesse }}</td>
+            <td>{{ grade_personnalite }}</td>
+            <td>{{ total_grade }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
